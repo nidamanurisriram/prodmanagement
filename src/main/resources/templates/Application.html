@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<title>Product</title>
+</head>
+<body style="background-color: cyan;">
+
+<h2> <center> Product Management </center> </h2>
+
+<form  th:action="@{/product/viewProduct}" method="get">
+
+<label> <strong> Show Data: </strong> </label>
+
+<input type="submit" value="view" /> </form>
+
+<br> <br>
+
+<form  th:action="@{/product/deleteProduct}">
+
+<label> <strong> Delete Record: </strong> </label>
+
+ <input type="text" name="pid" id="pid" placeholder="product id" />
+
+ <input type="submit" value="Delete" /> </form>
+
+<br> <br>
+
+<form  th:action="@{/product/saveProduct}" method="post">
+
+<label> <strong> Insert Record: </strong> </label>
+   
+           <input type="text" name="pname" id="pname" placeholder="product name" />
+      
+            <input type="text" name="quantity" id="qut"  placeholder="quantity"/>
+            
+            <input type="text" name="price" id="qut"  placeholder="price" />
+       
+          <input type="submit" value="save"/> </form>
+
+<br> <br>
+
+<form  th:action="@{/product/updateProduct}" method="post">
+
+<label> <strong> Update Record: </strong> </label>
+
+ <input type="text" name="pid" id="pid" placeholder="product id" />
+ 
+ <input type="text" name="pname" id="pname" placeholder="product name" />
+      
+ <input type="text" name="quantity" id="qut"  placeholder="quantity"/>
+            
+ <input type="text" name="price" id="qut"  placeholder="price" />
+
+ <input type="submit" value="Update" /> </form>
+
+<br> <br> <br> <br>
+
+<style type="text/css">
+label{
+width: 150px;
+display: inline-block;
+}
+</style>
+
+</body>
+</html>
